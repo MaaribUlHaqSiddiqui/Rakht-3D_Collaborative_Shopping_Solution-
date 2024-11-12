@@ -51,7 +51,7 @@ public class pants : MonoBehaviour, IInteractable
 
     IEnumerator FetchPantData()
     {
-        string url = "http://localhost/unity_backend/pants.php";
+        string url = "http://localhost:6000/get-pants";
 
         WWW www = new WWW(url);
         yield return www;
@@ -168,7 +168,7 @@ public class pants : MonoBehaviour, IInteractable
         string playerName = PhotonNetwork.NickName;
         Debug.Log("Player Name: " + playerName);
 
-        string url = "http://localhost/unity_backend/get_user_measurements.php?username=" + playerName;
+        string url = "http://localhost:6000/get_user_measurements?username=" + playerName;
 
         WWW www = new WWW(url);
         yield return www;

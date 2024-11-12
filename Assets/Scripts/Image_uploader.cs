@@ -109,7 +109,7 @@ public class ImageHandler : MonoBehaviour
     IEnumerator SendImagePathToServer(string username, string imagePath)
     {
         // Replace the URL with the actual URL of your save_image.php script
-        string url = "http://localhost/unity_backend/save_img.php";
+        string url = "http://localhost:5000/upload-image";
 
         WWWForm form = new WWWForm();
         form.AddField("username", username);

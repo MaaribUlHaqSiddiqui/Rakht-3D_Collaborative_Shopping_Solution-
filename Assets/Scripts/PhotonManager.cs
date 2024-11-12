@@ -403,7 +403,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         form.AddField("loginuser", username);
         form.AddField("loginpass", password);
 
-        string url = "http://localhost/unity_backend/server.php";
+        string url = "http://localhost:7000/login";
 
         using (WWW www = new WWW(url, form))
         {
@@ -442,7 +442,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         form.AddField("registeruser", username);
         form.AddField("registerpass", password);
 
-        string url = "http://localhost/unity_backend/register.php";
+        string url = "http://localhost:7000/register";
 
         using (WWW www = new WWW(url, form))
         {

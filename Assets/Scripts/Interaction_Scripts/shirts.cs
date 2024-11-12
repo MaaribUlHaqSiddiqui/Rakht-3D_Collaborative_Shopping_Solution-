@@ -50,7 +50,7 @@ public class shirts : MonoBehaviour, IInteractable
 
     IEnumerator FetchShirtData()
     {
-        string url = "http://localhost/unity_backend/shirts.php";
+        string url = "http://localhost:6000/get-shirts";
 
         WWW www = new WWW(url);
         yield return www;
@@ -181,7 +181,7 @@ public class shirts : MonoBehaviour, IInteractable
         string playerName = PhotonNetwork.NickName;
         Debug.Log("Player Name: " + playerName);
 
-        string url = "http://localhost/unity_backend/get_user_measurements.php?username=" + playerName;
+        string url = "http://localhost:6000/get_user_measurements?username=" + playerName;
 
         WWW www = new WWW(url);
         yield return www;
